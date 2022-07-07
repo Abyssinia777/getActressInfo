@@ -1,0 +1,24 @@
+$primaryColor:cadetblue;
+$whiteColor:#ffffff;
+$blackColor:#6666;
+@mixin button(
+  $backGroundcolor:$primaryColor
+  ,$borderColor:$primaryColor,
+  $textColor:$whiteColor){
+  font-weight: 700;
+  background-color: $backGroundcolor;
+  border-color: $borderColor;
+  border:1px;
+  border-radius: 5px;
+  min-width: 100px;
+  padding: 10px;
+  color :$textColor;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
+
+.primaryButton{
+  @include button
+}
